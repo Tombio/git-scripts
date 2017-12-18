@@ -19,3 +19,4 @@
     rp = pull --rebase
     fp = pull --ff
     current = rev-parse --abbrev-ref HEAD
+    lb = !git branch -vv | cut -c 3- | awk '$3 !~/\\[/ { print $1 }'
